@@ -15,6 +15,7 @@
 		99AFF20C25DA52500005A069 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99AFF20A25DA52500005A069 /* LaunchScreen.storyboard */; };
 		99AFF21725DA52500005A069 /* RedbubbleHomeworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AFF21625DA52500005A069 /* RedbubbleHomeworkTests.swift */; };
 		99AFF22225DA52500005A069 /* RedbubbleHomeworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AFF22125DA52500005A069 /* RedbubbleHomeworkUITests.swift */; };
+		99AFF23325DB6C500005A069 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99AFF23225DB6C500005A069 /* DataFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		99AFF21D25DA52500005A069 /* RedbubbleHomeworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedbubbleHomeworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99AFF22125DA52500005A069 /* RedbubbleHomeworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedbubbleHomeworkUITests.swift; sourceTree = "<group>"; };
 		99AFF22325DA52500005A069 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99AFF23225DB6C500005A069 /* DataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				99AFF1FF25DA524F0005A069 /* AppDelegate.swift */,
 				99AFF20125DA524F0005A069 /* SceneDelegate.swift */,
 				99AFF20325DA524F0005A069 /* ViewController.swift */,
+				99AFF23225DB6C500005A069 /* DataFetcher.swift */,
 				99AFF20525DA524F0005A069 /* Main.storyboard */,
 				99AFF20825DA52500005A069 /* Assets.xcassets */,
 				99AFF20A25DA52500005A069 /* LaunchScreen.storyboard */,
@@ -261,6 +264,7 @@
 				99AFF20425DA524F0005A069 /* ViewController.swift in Sources */,
 				99AFF20025DA524F0005A069 /* AppDelegate.swift in Sources */,
 				99AFF20225DA524F0005A069 /* SceneDelegate.swift in Sources */,
+				99AFF23325DB6C500005A069 /* DataFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
