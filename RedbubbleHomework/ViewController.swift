@@ -18,7 +18,7 @@ struct HomeModel {
     let artist: String?
 }
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     var grid: [HomeModel] = []
 
     @IBOutlet var collectionView: UICollectionView!
@@ -31,7 +31,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
 
     func fetchData() {
-        DataFetcher.shared.getDataFromUrl(url: "https://take-home-test.herokuapp.com/api/v1/works.json") { (data, _, error) in
+        DataFetcher.shared.getDataFromUrl(url: "https://take-home-test.herokuapp.com/bff/ios/explore.json") { (data, _, error) in
             if let data = data {
                 do {
                     guard let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] else { return }
@@ -44,8 +44,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                                   let safeForWork = item["safeForWork"] as? Bool,
                                   let thumbnailUrl = item["thumbnailUrl"] as? String else { return nil }
 
-                            let amount = item["amount"] as? Double
-                            let currency = item["currency"] as? String
+                            let price = item["price"] as? [String: Any]
+                            let amount = price?["amount"] as? Double
+                            let currency = price?["currency"] as? String
                             let artist = item["artist"] as? String
 
                            return HomeModel(type: type, id: id, title: title, safeForWork: safeForWork, thumbnailUrl: thumbnailUrl, amount: amount, currency: currency, artist: artist)
@@ -66,14 +67,21 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "home cell", for: indexPath) as! ExploreCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "home cell", for: indexPath) as! CollectionViewCell
         cell.homeModel = grid[indexPath.row]
         cell.cfg()
         return cell
     }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let titleViewHeight: CGFloat = 67
+        let itemWidth: CGFloat = (collectionView.frame.width - 8 * (2 + CGFloat(integerLiteral: 1)))/2 - 1
+        let itemHeight: CGFloat = itemWidth + titleViewHeight
+        return CGSize(width: itemWidth, height: itemHeight)
+    }
 }
 
-class ExploreCollectionViewCell: UICollectionViewCell {
+class CollectionViewCell: UICollectionViewCell {
     @IBOutlet var image: UIImageView!
     @IBOutlet var title1: UILabel!
     @IBOutlet var title2: UILabel!
@@ -113,7 +121,7 @@ class ExploreCollectionViewCell: UICollectionViewCell {
             }
         }
 
-        title1.font = UIFont.systemFont(ofSize: 17.0, weight: .bold)
+        title1.font = UIFont.systemFont(ofSize: 15.0, weight: .bold)
         title2.font = UIFont.systemFont(ofSize: 13.0, weight: .regular)
         title1.textColor = UIColor(red: 0.251, green: 0.208, blue: 0.306, alpha: 1)
         title2.textColor = UIColor(red: 0.549, green: 0.584, blue: 0.647, alpha: 1)
