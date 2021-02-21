@@ -1,8 +1,5 @@
 //
-//  RedbubbleHomeworkTests.swift
-//  RedbubbleHomeworkTests
-//
-//  Created by Zoe Wen on 15/2/21.
+//  Copyright © 2021 Redbubble. All rights reserved.
 //
 
 import XCTest
