@@ -7,10 +7,12 @@
 ## Task
 
 - Refactor (TODO: Do we explicitly tell them to refactor?)
-- Add a work page
-  - https://take-home-test.herokuapp.com/bff/ios/workDetails.json
-- Add a product page
-  - https://take-home-test.herokuapp.com/bff/ios/productDetails.json
+- Add a work screen
+  - Data is available at [https://take-home-test.herokuapp.com/bff/ios/workDetails.json](https://take-home-test.herokuapp.com/bff/ios/workDetails.json)
+  - Mockup is in [mockups/work-screen.png](./mockups/work-screen.png)
+- Add a product screen
+  - Data is available at [https://take-home-test.herokuapp.com/bff/ios/productDetails.json](https://take-home-test.herokuapp.com/bff/ios/productDetails.json)
+  - Mockup is in [mockups/product-screen.png](./mockups/product-screen.png)
 
 ## Submission Requirements
 
