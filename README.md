@@ -1,77 +1,68 @@
-# Redbubble iOS Homework Task
+# Hi there 👋
 
-Hello! Welcome to our homework task.
+Welcome to the homework exercise for the role of iOS Engineer at Redbubble. We're excited and thankful that you're here!
 
-This task should only take you a couple of hours all together so please don't spend too much time on it. If you have any questions, feel free to ask or make any assumptions you like as long as you document and have a good reason for them.
+# Intro
 
-Good luck and we look forward to seeing your solution!
+This project is a partial implementation of the first screen in the following design. It contains a grid of artworks and products.
 
+- [Design](https://www.figma.com/file/lRxDGzqYH2GvBMTon2Chvg/iOS-Homework-Activity)
+- [Style guide](https://redbubble.design/foundations/color)
 
-## The Task
-
-Clone this template project. It is written in Swift 5 so please continue using Swift and Xcode 12+.
-
-Try to avoid using any other third party libraries.
-
-Assume that you will only have to support iPhones for now.
+# Next steps...
 
 #### Step 1
 
-This project has implementation of the first screen in following design. It contains a grid of artworks and products.
+Given the above context, review the codebase and write down what you think are the issues, how would you improve them and why?
 
-Using a production quality lens, review the codebase and write down what are the issues and why? How would you improve it and why? Just a few sentences is enough :)
+> Note: For the sake of this exercise, it is ok to make assumptions about any questions you might have to make sure that you can proceed with this step.
 
-Refactor the code and implementing the solution in a better way. You can choose to reuse as much or as little of the existing code as you want without any limitations.
+If you have any questions, about the features or design - include them in your response.
 
-If you have any questions, about the component features or design - include them in your response.
-
-Implement the UI according to the visual design and style guide linked below.
-
-Todo: figure out how to share design, style and assets.
-Clicking on the respective UI element allows you to see the element’s text and colour styles (e.g. Headline7/textPrimary).
-You can find the SVG assets for the icons in the root directory of this repo, next to this README file.
-
-https://www.figma.com/file/lRxDGzqYH2GvBMTon2Chvg/iOS-Homework-Activity?node-id=4%3A838
-https://redbubble.design/foundations/color
-
+Just a few sentences is enough 🙂.
 
 #### Step 2
 
-Extend the project, build screen 2 and screen 3.
+Now that you've reviewed the project, have a go at refactoring the code, adding tests and implementing the solution in a better way.
 
-Screen 2 is details for an artwork, you'll need to request data with its id from the API at `https://take-home-test.herokuapp.com/bff/workDetails/<id>.json`, for example: `https://take-home-test.herokuapp.com/bff/workDetails/326210.json`
+You can choose to reuse as much or as little of the existing code as you want without any limitations.
 
-Screen 3 is details for an product, you'll need to request data with its id from the API at `https://take-home-test.herokuapp.com/bff/ios/productDetails/<id>.json`, for example: `https://take-home-test.herokuapp.com/bff/ios/productDetails/326210_minty-serviette_PJQVX.json`
+#### Step 3
 
-We want:
+Now that you've refactored the project, we'd like you to extend it by implementing the artwork details screen (`Screen 2` in the designs).
 
-* Implement the UI according to the visual design and style guide linked above.
-*
+We'd like to have the ability to tap on an artwork on the first screen and have the app navigate to a details screen for that artwork.
 
+You'll need to request the artwork's data using its ID from the API at `https://take-home-test.herokuapp.com/bff/workDetails/<id>.json`. This endpoint contains all of the details needed, as well as the products this artwork is available on.
 
-## Expectations
+> For example: `https://take-home-test.herokuapp.com/bff/workDetails/326210.json`
 
-We are looking for production ready code. This means we will be looking for all the usual programming best practises:
+# 💡 Some tips
+- Don't spend more than 2 hours on this exercise, we know your time is valuable ♥️.
+- Your code does not need to be complete or production ready, just a good start that demonstrates your thinking and coding.
+- You don't have all the answers, so make some assumptions, try some things out it's ok to make mistakes.
+- Don't sweat the visual details too much.
+- Code the way you like to code.
+- We'll pair on your code later on in the interview process.
 
-* thoughtful architecture
-* tests (Feel free to use Quick and Nimble if you like. But XCTest is okay)
-* documentation
-* code style and readability
-* no warnings or errors
+# 📮 When you're done
 
-This also means we will looking to end up with a working app and dare I say, even a delightful one!
-
-
-#### 📮 When you're done
-When you're ready, you can submit your code and response to us via the link in the same email where you found these instructions.
-
-🤫 Anonymity
+#### 🤫 Anonymity
 
 We'll evaluate you most fairly if only our talent team knows whose submission is being evaluated.
 
 Please don't put your name or other identifying information in your submission.
 
-#### 💕 Have fun
+> Run the `anonymise-author.sh` script before submitting.
+> This will update all the git commits to remove your name and email.
+
+#### 📫 Submit your code
+
+When you're ready, you can submit your code and response to us via the link in the same email where you found these instructions.
+
+> Run the `create-tarball.sh` script to create a single tarball file to submit.
+
+# 💕 Have fun
 This is the most important bit.
 
 We love what we do and are excited to come to work each day.
