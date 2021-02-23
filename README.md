@@ -6,7 +6,7 @@ Welcome to the homework exercise for the role of iOS Engineer at Redbubble. We'r
 
 This project is a partial implementation of the first screen in the following design. It contains a grid of artworks and products.
 
-- [Design](https://www.figma.com/file/lRxDGzqYH2GvBMTon2Chvg/iOS-Homework-Activity)
+- [Design mockups](./mockups)
 - [Style guide](https://redbubble.design/foundations/color)
 
 # Next steps...
@@ -19,31 +19,37 @@ Given the above context, review the codebase and write down what you think are t
 
 If you have any questions, about the features or design - include them in your response.
 
-Just a few sentences is enough 🙂.
+Just a few sentences is enough 🙂
 
 #### Step 2
 
 Now that you've reviewed the project, have a go at refactoring the code, adding tests and implementing the solution in a better way.
 
+In this step, don't feel obliged to implement all the fixes and improvements you noted down in Step 1.
+Do what you feel is practical in the time you have, and will assist you the most in Step 3.
+
 You can choose to reuse as much or as little of the existing code as you want without any limitations.
 
 #### Step 3
 
-Now that you've refactored the project, we'd like you to extend it by implementing the artwork details screen (`Screen 2` in the designs).
+Now that you've refactored the project, we'd like you to extend it by implementing the [artwork details screen](./mockups/work-screen.png)
 
 We'd like to have the ability to tap on an artwork on the first screen and have the app navigate to a details screen for that artwork.
 
-You'll need to request the artwork's data using its ID from the API at `https://take-home-test.herokuapp.com/bff/workDetails/<id>.json`. This endpoint contains all of the details needed, as well as the products this artwork is available on.
+You'll need to request the artwork's data using its ID from the API at `https://take-home-test.herokuapp.com/bff/workDetails/<id>.json`.
+This endpoint contains all of the details needed, as well as the products this artwork is available on.
 
 > For example: `https://take-home-test.herokuapp.com/bff/workDetails/326210.json`
 
 # 💡 Some tips
-- Don't spend more than 2 hours on this exercise, we know your time is valuable ♥️.
+
+- Don't spend more than a few hours on this exercise, we know your time is valuable ♥️.
 - Your code does not need to be complete or production ready, just a good start that demonstrates your thinking and coding.
 - You don't have all the answers, so make some assumptions, try some things out it's ok to make mistakes.
 - Don't sweat the visual details too much.
 - Code the way you like to code.
 - We'll pair on your code later on in the interview process.
+- We value testing in our codebases 😉
 
 # 📮 When you're done
 
@@ -63,6 +69,7 @@ When you're ready, you can submit your code and response to us via the link in t
 > Run the `create-tarball.sh` script to create a single tarball file to submit.
 
 # 💕 Have fun
+
 This is the most important bit.
 
 We love what we do and are excited to come to work each day.
